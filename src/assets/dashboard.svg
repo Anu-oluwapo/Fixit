@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="91" viewBox="0 0 89 91">
+  <defs>
+    <filter id="Rectangle_139" x="0" y="0" width="89" height="91" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.071"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fbc07c"/>
+      <stop offset="1" stop-color="#fbf37c"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_123" data-name="Group 123" transform="translate(278 473)">
+    <g transform="matrix(1, 0, 0, 1, -278, -473)" filter="url(#Rectangle_139)">
+      <rect id="Rectangle_139-2" data-name="Rectangle 139" width="71" height="73" rx="20" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <path id="Icon_material-dashboard" data-name="Icon material-dashboard" d="M4.5,26.108H21.787V4.5H4.5Zm0,17.287H21.787V30.43H4.5Zm21.608,0H43.395V21.787H26.108Zm0-38.895V17.465H43.395V4.5Z" transform="translate(-257.447 -454.447)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
