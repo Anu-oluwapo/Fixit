@@ -108,7 +108,7 @@ if(this.password.length < 6){
         console.log(cred.user);
 
         console.log('Creating New User On The Server');
-                    fetch('http://localhost:3000/collection/users', {
+                    fetch('https://fixit-ng.herokuapp.com/collection/users', {
                         method: "POST",
                         body: JSON.stringify(
                             {

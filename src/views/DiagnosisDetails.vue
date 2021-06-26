@@ -46,7 +46,7 @@ export default {
         },
         methods:{
           Delete(){
-            fetch("http://localhost:3000/collection/diagnosis/"+this.id, {method: "DELETE"})
+            fetch("https://fixit-ng.herokuapp.com/collection/diagnosis/"+this.id, {method: "DELETE"})
             alert("Your Selected Order Has Been Deleted")
             window.location = "/";
     

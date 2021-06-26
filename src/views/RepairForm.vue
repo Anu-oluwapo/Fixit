@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 <template>
   <div class="welcome"><h4>Request A Repair</h4></div>
   <br />

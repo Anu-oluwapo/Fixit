@@ -165,7 +165,7 @@ components:{Back},
   methods:{
     submit() {
       console.log("Sending Diagnosis Order to server");
-      fetch("http://localhost:3000/collection/diagnosis", {
+      fetch("https://fixit-ng.herokuapp.com/collection/diagnosis", {
         method: "POST",
         body: JSON.stringify({
           Uid: this.userr.id,
