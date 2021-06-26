@@ -11,7 +11,7 @@
     <br />
 
     <div class="jumbotron">
-      <FORM class="request-form" id="request-form" >
+      <form class="request-form" id="request-form" >
         <div class="form-group">
           <label><h5>What Gadget Do You Want To Fix :</h5></label>
           <select
@@ -203,7 +203,7 @@
 
         <!--input type="submit" v-else
           class="btn btn-info" value="Proceed"/-->
-      </FORM>
+      </form>
     </div>
   </div>
 </template>
