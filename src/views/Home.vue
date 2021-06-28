@@ -233,7 +233,7 @@
         
         </section>
 
-        <footer class="page-footer py-5 bg-dark">
+        <footer class="page-footer py-5 ">
 
     <!-- Footer Links -->
 
@@ -309,12 +309,12 @@
                 <!-- Links -->
                 <h5 class="text-uppercase">Socials</h5><br>
 
-                <a href=""><img src="assets/instagram.png" alt=""></a>
+                <a href=""><img src="../assets/instagram.png" alt=""></a>
                 &nbsp;&nbsp;
 
-                <a href=""> <img src="assets/twitter.png" alt=""></a>&nbsp;&nbsp;&nbsp;
+                <a href=""> <img src="../assets/twitter.png" alt=""></a>&nbsp;&nbsp;&nbsp;
 
-                <a href=""> <img src="assets/facebook.png" alt=""></a>
+                <a href=""> <img src="../assets/facebook.png" alt=""></a>
 
             </div>
             <!-- Grid column -->
@@ -369,6 +369,11 @@ display: block
   
   color: #000000;
   
+}
+
+footer{
+color: rgb(223, 223, 223);
+background-color: #141618;
 }
 
 .blog-image{
