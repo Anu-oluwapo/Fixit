@@ -7,12 +7,12 @@
 
                 <router-link to="/"><a class="navbar-brand mx-auto" href="#">Logo</a></router-link>
 
-                <button class="navbar-toggler" @mouseleave="navbarToggle()" @click="navbarToggle()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                <button class="navbar-toggler" @click="navbarToggle()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" @mouseleave="navbarToggle()" id="navbarCollapse">
+                <div class="collapse navbar-collapse"   id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <!-- <li id="regButton" class="nav-item  bg-dark">
                             <a style="color: rgb(209, 209, 209);" class="navlink" href="login.html">
