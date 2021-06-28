@@ -10,9 +10,7 @@
   "dependencies": {
     "bootstrap": "^5.0.1",
     "core-js": "^3.6.5",
-    "emailjs-com": "^3.0.2",
     "firebase": "^8.6.3",
-    "flutterwave-vue-v3": "^1.0.5",
     "jquery": "^3.6.0",
     "vue": "^3.1.1",
     "vue-paystack": "^2.0.4",

@@ -111,7 +111,7 @@
 
 <script>
 import Back from '../components/BackButton.vue'
-import emailjs from 'emailjs-com'
+import emailjs from '../email-js';
 export default {
 components:{Back},
  props: ["userr", "brands", "repairTypes"],

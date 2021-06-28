@@ -13,7 +13,7 @@
     <br />
 
     <div class="jumbotron">
-      <form class="request-form" id="request-form" >
+      <form class="request-form" id="request-form">
         <div class="form-group">
           <label><h5>What Gadget Do You Want To Fix :</h5></label>
           <select
@@ -176,15 +176,11 @@
         <h2>Price : ₦{{ price.toLocaleString("en-US") }}</h2>
         <br />
 
-        <button
-          v-if="payment"
-          class="btn btn-warning"
-          @click.prevent="pay()"
-        >
+        <button v-if="payment" class="btn btn-warning" @click.prevent="pay()">
           Pay ₦{{ price.toLocaleString("en-US") }}
         </button>
 
-    <!-- <paystack v-if="payment"
+        <!-- <paystack v-if="payment"
     :amount="price * 100"
     :email="userr.email"
     :paystackkey="key"
@@ -196,7 +192,7 @@
  </paystack> -->
 
         <button
-         v-else
+          v-else
           @click.prevent="submit(), sendEmail()"
           class="btn btn-info"
         >
@@ -211,25 +207,23 @@
 </template>
 
 <script>
-import emailjs from 'emailjs-com';
+import emailjs from '../email-js';
 import Back from "../components/BackButton.vue";
 //import paystack from 'vue-paystack'
 
-
 export default {
-
   components: {
-    Back, 
+    Back,
     //paystack,
-    
   },
 
   props: ["userr", "brands", "repairTypes"],
 
-  data(){
+  data() {
     return {
       title: "Payments",
-      logo: "https://cdn.logo.com/hotlink-ok/enterprise/eid_422203f0-477b-492b-9847-689feab1452a/logo-dark-2020.png",
+      logo:
+        "https://cdn.logo.com/hotlink-ok/enterprise/eid_422203f0-477b-492b-9847-689feab1452a/logo-dark-2020.png",
       key: "pk_test_a3ed809a4b68a94ce004988fd8a33cc70be3695d",
       refkey: "RPR" + Math.floor(Math.random() * 1000000000 + 1),
       isProduction: true,
@@ -256,7 +250,7 @@ export default {
   },
 
   computed: {
-    price: function () {
+    price: function() {
       return this.selectedRepair.price + this.selectedBrand.price;
     },
 
@@ -279,46 +273,35 @@ export default {
     },
   },
 
-  methods:{
-async pay(){
-    this.payWithPaystack()
-  setTimeout( this.submit, 10000)
-  setTimeout( this.sendEmail2, 10000)
-  //console.log(res)
-},
-  payWithPaystack(){
- // eslint-disable-next-line no-undef
- var handler = PaystackPop.setup({
-   key:this.key,
-   email:this.userr.email,
-   amount:this.price * 100,
-   currency: 'NGN',
-   ref: this.refkey,
-
-  async callback(res){
-    //this.submit()
-  let message = 'Payment confirmed! Reference: ' + res.reference;
-  alert(message)
-            
-   },
-
-   onClose(){
-     alert('Transaction was not completed, Window Closed')
-     
-   },
-   
-  
-
- })
- handler.openIframe()
-  
-
-
- 
- 
- 
+  methods: {
+    async pay() {
+      this.payWithPaystack();
+      setTimeout(this.submit, 10000);
+      setTimeout(this.sendEmail2, 10000);
+      //console.log(res)
     },
-     
+    payWithPaystack() {
+      // eslint-disable-next-line no-undef
+      var handler = PaystackPop.setup({
+        key: this.key,
+        email: this.userr.email,
+        amount: this.price * 100,
+        currency: "NGN",
+        ref: this.refkey,
+
+        async callback(res) {
+          //this.submit()
+          let message = "Payment confirmed! Reference: " + res.reference;
+          alert(message);
+        },
+
+        onClose() {
+          alert("Transaction was not completed, Window Closed");
+        },
+      });
+      handler.openIframe();
+    },
+
     submit() {
       console.log("Sending Order to server");
       fetch("https://fixit-ng.herokuapp.com/collection/repairs", {
@@ -348,62 +331,58 @@ async pay(){
           "Content-type": "application/json; charset=UTF-8",
         },
       }).then(() => {
-          alert("Your Repair Request Has Succesfully Been Sent");
-          window.location = "/";
-        });
+        alert("Your Repair Request Has Succesfully Been Sent");
+        window.location = "/";
+      });
     },
 
     sendEmail() {
-      
-    try {
-            emailjs.send(
-              "service_gs2ovps",
-              "template_q1vmk3p",
-              
-              {
-                name: this.userr.firstname + this.userr.lastname,
-                email: this.userr.email,
-                message:
-                  "Dear Customer, This is Your Online Reciept To Confirm Your Repair Order to fix your " +
-                  this.selectedRepair.name +
-                  " On your " +
-                  this.gadget.name +
-                  ". Please Note That The Repair Costs ₦" +
-                  this.price.toLocaleString("en-US") +
-                  " Naira, And You'd be required to pay Once we come Pick up or You come Drop Off Your Device. Further Information Will be passed to You as we carry on with your repair. Thank You For Choosing Fixit",
-              },
-              "user_fZfqFU2yW1AN3CpSWiXvW"
-              
-            );
-          } catch (error) {
-            console.log({ error });
-          }
-     },
+      try {
+        emailjs.send(
+          "service_gs2ovps",
+          "template_q1vmk3p",
 
-     sendEmail2() {
-      
-    try {
-            emailjs.send(
-              "service_gs2ovps",
-              "template_q1vmk3p",
-              
-              {
-                name: this.userr.firstname + this.userr.lastname,
-                email: this.userr.email,
-                message:
-                  "Dear Customer, This is Your Online Reciept To Confirm Your Repair Order to fix your " +
-                  this.selectedRepair.name +
-                  " On your " +
-                  this.gadget.name +
-                  ". We have recieved your payment and will be expecting your device as soon as possibke. Further Information Will be passed to You as we carry on with your repair. Thank You For Choosing Fixit",
-              },
-              "user_fZfqFU2yW1AN3CpSWiXvW"
-              
-            );
-          } catch (error) {
-            console.log({ error });
-          }
-     },
+          {
+            name: this.userr.firstname + this.userr.lastname,
+            email: this.userr.email,
+            message:
+              "Dear Customer, This is Your Online Reciept To Confirm Your Repair Order to fix your " +
+              this.selectedRepair.name +
+              " On your " +
+              this.gadget.name +
+              ". Please Note That The Repair Costs ₦" +
+              this.price.toLocaleString("en-US") +
+              " Naira, And You'd be required to pay Once we come Pick up or You come Drop Off Your Device. Further Information Will be passed to You as we carry on with your repair. Thank You For Choosing Fixit",
+          },
+          "user_fZfqFU2yW1AN3CpSWiXvW"
+        );
+      } catch (error) {
+        console.log({ error });
+      }
+    },
+
+    sendEmail2() {
+      try {
+        emailjs.send(
+          "service_gs2ovps",
+          "template_q1vmk3p",
+
+          {
+            name: this.userr.firstname + this.userr.lastname,
+            email: this.userr.email,
+            message:
+              "Dear Customer, This is Your Online Reciept To Confirm Your Repair Order to fix your " +
+              this.selectedRepair.name +
+              " On your " +
+              this.gadget.name +
+              ". We have recieved your payment and will be expecting your device as soon as possibke. Further Information Will be passed to You as we carry on with your repair. Thank You For Choosing Fixit",
+          },
+          "user_fZfqFU2yW1AN3CpSWiXvW"
+        );
+      } catch (error) {
+        console.log({ error });
+      }
+    },
 
     toggleTrue() {
       this.showPickup = true;
@@ -421,5 +400,5 @@ async pay(){
       this.showPickup = false;
     },
   },
-}
+};
 </script>
