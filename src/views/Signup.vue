@@ -126,7 +126,7 @@ window.alert('Account Created Successfully');
     
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
-             window.location = 'http://localhost:8080/';
+             window.location = '/';
             }
           });
         
