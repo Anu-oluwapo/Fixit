@@ -191,7 +191,7 @@
 <div class="col-lg-8 row">
 <div class="col-lg-6">
 
-<img src="../assets/blog1.png">
+<img class="blog-image" src="../assets/blog1.png">
 <h4 class="my-3">Lorem Ipsum Dolor Sit Amet</h4>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pretium odio. Phasellus elementum convallis convallis. Proin sit amet euismod lectus. 
 </p>
@@ -202,7 +202,7 @@
 </div>
 <div class="col-lg-6">
 
-<img src="../assets/blog2.png">
+<img class="blog-image" src="../assets/blog2.png">
 <h4 class="my-3">Lorem Ipsum Dolor Sit Amet</h4>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pretium odio. Phasellus elementum convallis convallis. Proin sit amet euismod lectus. 
 </p>
@@ -369,6 +369,10 @@ display: block
   
   color: #000000;
   
+}
+
+.blog-image{
+width: 100%;
 }
 
 .mail{
