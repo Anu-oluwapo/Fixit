@@ -164,7 +164,7 @@ components:{Back},
 
   methods:{
     submit() {
-      console.log("Sending Diagnosis Order to server");
+      // console.log("Sending Diagnosis Order to server");
       fetch("https://fixit-ng.herokuapp.com/collection/diagnosis", {
         method: "POST",
         body: JSON.stringify({
@@ -210,7 +210,7 @@ components:{Back},
               
             );
           } catch (error) {
-            console.log({ error });
+            alert({ error });
           }
      },
   }

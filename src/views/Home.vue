@@ -31,27 +31,27 @@
                 <div class="text-center ">
                     <div class="row">
                         <div class=" col-lg-2 col-md-3 col-sm-4 col-xs-2 pt-5">
-                            <img src="../assets/Group7.png">
+                            <img alt="partner" src="../assets/Group7.png">
                         </div>
 
                         <div class=" col-lg-2 col-md-3 col-sm-4 col-xs-2 pt-5">
-                            <img src="../assets/Group8.png">
+                            <img alt="partner" src="../assets/Group8.png">
                         </div>
 
                         <div class=" col-lg-2 col-md-3 col-sm-4 col-xs-2 pt-5">
-                            <img src="../assets/Group9.png">
+                            <img alt="partner" src="../assets/Group9.png">
                         </div>
 
                         <div class=" col-lg-2 col-md-3 col-sm-4 pt-5">
-                            <img src="../assets/Group13.png">
+                            <img alt="partner" src="../assets/Group13.png">
                         </div>
 
                         <div class=" col-lg-2 col-md-3 col-sm-4 pt-5">
-                            <img src="../assets/Group14.png">
+                            <img alt="partner" src="../assets/Group14.png">
                         </div>
 
                         <div class=" col-lg-2 col-md-3 col-sm-4 pt-5">
-                            <img src="../assets/Group18.png">
+                            <img alt="partner" src="../assets/Group18.png">
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                     <div class="col-lg-6 mt-5 pl-5">
                         <div class="row pr-lg-5">
                             <div class="col-2">
-                                <img src="../assets/1.png">
+                                <img alt="num1" src="../assets/1.png">
                                 <div class="line mt-3">
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
 
 
                             <div class="col-2">
-                                <img src="../assets/2.png">
+                                <img alt="num2" src="../assets/2.png">
                                 <div class="line mt-3">
                                 </div>
                             </div>
@@ -124,7 +124,7 @@
 
 
                             <div class="col-2">
-                                <img src="../assets/3.png">
+                                <img alt="num3" src="../assets/3.png">
                             </div>
                             <div class="col-10">
                                 <h5 class=" mt-4">Get Your Device Fixed</h5>
@@ -152,15 +152,15 @@
             <div class="col-lg-10 offset-lg-1 pt-5 pb-5  ">
             <h1 class="text-center"><b>Happy Customers</b></h1>
                 <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="">
-                    <div class="carousel-inner" role="listbox">
+                    <div name="comment" class="carousel-inner" role="listbox">
                         <div class="carousel-item active text-center p-4">
                             <blockquote class="blockquote text-center">
-                                <p class="quote mb-4"><i class="fa fa-quote-left"></i> " Lorem ipsum dolor sit amet,
+                                <p class="quote mb-4"><i class="fa fa-quote-left"></i>  Lorem ipsum dolor sit amet,
                                     consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
                                     dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                                    dolores et ea rebum. " <i class="fa fa-quote-right"></i>
+                                    dolores et ea rebum.  <i class="fa fa-quote-right"></i>
                                 </p>
-                                 <span class="blockquote-footer mb-2">Albert Einstein</span><img src="https://images-na.ssl-images-amazon.com/images/I/51FPLPtf2%2BL._AC_.jpg" class="img" />
+                                 <span class="blockquote-footer mb-2">Albert Einstein</span><img src="https://images-na.ssl-images-amazon.com/images/I/51FPLPtf2%2BL._AC_.jpg" alt="user" class="img" />
                                  
                                 
                             </blockquote>
@@ -191,7 +191,7 @@
 <div class="col-lg-8 row">
 <div class="col-lg-6">
 
-<img class="blog-image" src="../assets/blog1.png">
+<img alt="blog" class="blog-image" src="../assets/blog1.png">
 <h4 class="my-3">Lorem Ipsum Dolor Sit Amet</h4>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pretium odio. Phasellus elementum convallis convallis. Proin sit amet euismod lectus. 
 </p>
@@ -202,7 +202,7 @@
 </div>
 <div class="col-lg-6">
 
-<img class="blog-image" src="../assets/blog2.png">
+<img alt="blog" class="blog-image" src="../assets/blog2.png">
 <h4 class="my-3">Lorem Ipsum Dolor Sit Amet</h4>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pretium odio. Phasellus elementum convallis convallis. Proin sit amet euismod lectus. 
 </p>
@@ -287,16 +287,16 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="">support@fixit.ng</a>
+                        <a href="#!">support@fixit.ng</a>
                     </li>
                     <li>
-                        <a href="">09070750710</a>
+                        <a href="#!">09070750710</a>
                     </li>
                     <li>
-                        <a href="">09014113228</a>
+                        <a href="#!">09014113228</a>
                     </li>
                     <li>
-                        <a href="">07088885982</a>
+                        <a href="#!">07088885982</a>
                     </li>
                 </ul>
 
@@ -309,12 +309,12 @@
                 <!-- Links -->
                 <h5 class="text-uppercase">Socials</h5><br>
 
-                <a href=""><img src="../assets/instagram.png" alt=""></a>
+                <i><img src="../assets/instagram.png" alt="instagram"></i>
                 &nbsp;&nbsp;
 
-                <a href=""> <img src="../assets/twitter.png" alt=""></a>&nbsp;&nbsp;&nbsp;
+                <i> <img src="../assets/twitter.png" alt="twitter"></i>&nbsp;&nbsp;&nbsp;
 
-                <a href=""> <img src="../assets/facebook.png" alt=""></a>
+                <i> <img src="../assets/facebook.png" alt="facebook"></i>
 
             </div>
             <!-- Grid column -->
@@ -402,6 +402,7 @@ color: rgb(235, 233, 233);
 }
 .img{
     width: 3rem;
+    height: auto;
 }
 
 span{
@@ -449,6 +450,7 @@ h1 {
         }
 
         .about-img {
+        height: auto;
             width: 80%;
         }
 
@@ -458,6 +460,7 @@ h1 {
 
         .hero-img {
             width: 80%;
+            height: auto;
         }
 
         .line {

@@ -83,8 +83,8 @@ export default {
         loginRequest(){
             const auth = firebase.auth();
 
-            auth.signInWithEmailAndPassword(this.email, this.password).then(cred => {
-        console.log(cred.user);
+            auth.signInWithEmailAndPassword(this.email, this.password).then(() => {
+        // console.log(cred.user);
         //const Modal = document.querySelector('#regModal');
         // M.Modal.getInstance(modal).show();
         // $('#loginModal').modal('show');

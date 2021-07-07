@@ -14,32 +14,17 @@
 
                 <div class="collapse navbar-collapse"   id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
-                        <!-- <li id="regButton" class="nav-item  bg-dark">
-                            <a style="color: rgb(209, 209, 209);" class="navlink" href="login.html">
-                                <i class="far f-user"> <span class="navlink" style="color: rgb(209, 209, 209);">Login |
-                                        Register</span></i>
-                            </a>
-
-                        </li> -->
-
-                        <!-- <li id="dashButton" class="nav-item  bg-dark">
-                            <a style="color: rgb(209, 209, 209);" class="navlink"
-                                href="https://designtutorials.netlify.app/">
-                                <i class="far f-user"> <span class="navlink"
-                                        style="color: rgb(209, 209, 209);">Dashboard</span></i>
-                            </a>
-
-                        </li> -->
-
-                        <router-link to="/login" >
+                        
+                        
                         <li  class="nav-item  bg-dark p-3 mt-2">
-                            <a id="dashButton" style="color: rgb(209, 209, 209);" class="navlink">
+                        <router-link to="/login" >
+                            <span id="dashButton" style="color: rgb(209, 209, 209);" class="navlink">
                                  <span class="navlink"
                                         style="color: rgb(209, 209, 209);">Dashboard</span>
-                            </a>
-
-                        </li>
+                            </span>
                         </router-link>
+                        </li>
+                        
 
                     </ul>
 

@@ -33,7 +33,7 @@ global.jQuery = jQuery
 
   firebase.auth().onAuthStateChanged(user =>{
     if(user){ 
-      console.log(user);
+      //console.log(user);
       createApp(Dashboard).use(dashrouter).mount('#app')
       
     } else{

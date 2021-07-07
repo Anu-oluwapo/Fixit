@@ -105,9 +105,9 @@ if(this.password.length < 6){
             firebase.auth().createUserWithEmailAndPassword(this.email, this.password).catch(err => {
         window.alert(err.message);
     }).then(cred =>{
-        console.log(cred.user);
+       //console.log(cred.user);
 
-        console.log('Creating New User On The Server');
+        // console.log('Creating New User On The Server');
                     fetch('https://fixit-ng.herokuapp.com/collection/users', {
                         method: "POST",
                         body: JSON.stringify(
