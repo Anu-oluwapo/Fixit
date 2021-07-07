@@ -11,13 +11,14 @@
     <br />
 
     <div class="jumbotron">
-      <form class="request-form" id="request-form">
+      <form @submit.prevent="submit(), sendEmail()" class="request-form" id="request-form">
         <div class="form-group">
           <label><h5>What Gadget Do You Want To Fix :</h5></label>
           <select
             v-model="gadget.type"
             class="form-control"
             id="FormControlSelect1"
+            required
           >
             <option>Phone</option>
             <option>Tablet</option>
@@ -33,6 +34,7 @@
             v-model="selectedBrand"
             class="form-control"
             id="FormControlSelect2"
+            required
           >
             <option v-for="brand in brands" :key="brand._id" :value="brand">
               {{ brand.name }}
@@ -50,6 +52,7 @@
             v-model="selectedRepair"
             class="form-control"
             id="FormControlSelect3"
+            required
           >
             <option
               v-for="repairType in repairTypes"
@@ -68,7 +71,7 @@
 
         <div class="form-group">
           <label><h5>Input Device Details :</h5></label>
-          <input v-model="gadget.name" class="form-control" type="text" />
+          <input v-model="gadget.name" class="form-control" type="text" required />
           <small class="form-text text-muted"
             >Eg (Iphone 12 Pro Max, Samsung Q10 Television)</small
           ><br />
@@ -80,6 +83,7 @@
             v-model="gadget.modelNumber"
             class="form-control"
             type="text"
+            required
           />
           <small class="form-text text-muted"
             >Usually Seen At The Back Of The Device</small
@@ -191,7 +195,7 @@
 
         <button
           v-else
-          @click.prevent="submit(), sendEmail()"
+          type="submit"
           class="btn btn-info"
         >
           Proceed
@@ -333,7 +337,7 @@ export default {
     },
 
     submit() {
-      console.log("Sending Order to server");
+      // console.log("Sending Order to server");
       fetch("https://fixit-ng.herokuapp.com/collection/repairs", {
         method: "POST",
         body: JSON.stringify({
@@ -387,7 +391,7 @@ export default {
           "user_fZfqFU2yW1AN3CpSWiXvW"
         );
       } catch (error) {
-        console.log({ error });
+        alert({ error });
       }
     },
 
@@ -410,7 +414,7 @@ export default {
           "user_fZfqFU2yW1AN3CpSWiXvW"
         );
       } catch (error) {
-        console.log({ error });
+        alert({ error });
       }
     },
 

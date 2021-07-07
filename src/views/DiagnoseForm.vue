@@ -11,13 +11,14 @@
     <br />
 
     <div class="jumbotron">
-      <FORM class="request-form" id="request-form" >
+      <FORM @submit.prevent="submit(); sendEmail()" class="request-form" id="request-form" >
         <div class="form-group">
           <label><h5>What Gadget Do You Want To Diagnose :</h5></label>
           <select
             v-model="gadget.type"
             class="form-control"
             id="FormControlSelect1"
+            required
           >
             <option>Phone</option>
             <option>Tablet</option>
@@ -33,6 +34,7 @@
             v-model="selectedBrand"
             class="form-control"
             id="FormControlSelect2"
+            required
           >
             <option v-for="brand in brands" :key="brand._id" :value="brand">
               {{ brand.name }}
@@ -46,7 +48,7 @@
 
         <div class="form-group">
           <label><h5>Input Device Details :</h5></label>
-          <input v-model="gadget.name" class="form-control" type="text" />
+          <input v-model="gadget.name" class="form-control" type="text" required />
           <small class="form-text text-muted"
             >Eg (Iphone 12 Pro Max, Samsung Q10 Television)</small
           ><br />
@@ -58,6 +60,7 @@
             v-model="gadget.modelNumber"
             class="form-control"
             type="text"
+            required
           />
           <small class="form-text text-muted"
             >Usually Seen At The Back Of The Device</small
@@ -66,7 +69,7 @@
 
         <div class="form-group">
           <label><h5>Explain Problem :</h5></label>
-          <textarea v-model="gadget.problem" class="form-control" rows="6" >
+          <textarea v-model="gadget.problem" class="form-control" rows="6" required>
           
           </textarea>
           
@@ -80,6 +83,7 @@
             class="form-control"
             type="text"
             :value="userr.firstname + userr.lastname"
+            
           /><br />
         </div>
 
@@ -96,7 +100,7 @@
         
 
         <button
-          @click.prevent="submit(); sendEmail()"
+          type="submit"
           class="btn btn-info"
         >
           Proceed
