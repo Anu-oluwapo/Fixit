@@ -228,7 +228,7 @@
   <div class="head">  
       <h3 style="margin-top: 5px;">{{successMessage}}</h3>
 <h4>Your Payment Has been Recieved! Click Okay to continue </h4>
-      <button @click.prevent="submit(), sendEmail()" class="btn btn-success"> Okay </button>
+      <button @click.prevent="submit(), sendEmail2()" class="btn btn-success"> Okay </button>
     </div>
 
   </div>
@@ -409,7 +409,7 @@ export default {
               this.selectedRepair.name +
               " On your " +
               this.gadget.name +
-              ". We have recieved your payment and will be expecting your device as soon as possibke. Further Information Will be passed to You as we carry on with your repair. Thank You For Choosing Fixit",
+              ". We have recieved your payment and will be expecting your device as soon as possible. Further Information Will be passed to You as we carry on with your repair. Thank You For Choosing Fixit",
           },
           "user_fZfqFU2yW1AN3CpSWiXvW"
         );
