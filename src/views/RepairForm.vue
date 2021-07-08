@@ -228,7 +228,7 @@
   <div class="head">  
       <h3 style="margin-top: 5px;">{{successMessage}}</h3>
 <h4>Your Payment Has been Recieved! Click Okay to continue </h4>
-      <button @click.prevent="submit(), sendEmail2()" class="btn btn-success"> Okay </button>
+      <button @click.prevent="sendEmail2(); submit() " class="btn btn-success"> Okay </button>
     </div>
 
   </div>
