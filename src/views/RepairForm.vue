@@ -206,7 +206,7 @@
       </form>
     </div>
   </div>
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#success_tic">Open Modal</button>
+  
 
 <!-- Modal -->
 <div id="success_tic" class="modal fade" role="dialog">
