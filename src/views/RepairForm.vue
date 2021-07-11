@@ -152,7 +152,9 @@
           /><br />
         </div>
 
-        <div v-else></div>
+        <div v-else-if="showMap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.8828336277334!2d14.474897715683706!3d35.92536782415059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e45614486af17%3A0x49b8a7f42dc48fee!2sMiddlesex%20University%20Malta!5e0!3m2!1sen!2sng!4v1626006882579!5m2!1sen!2sng" width="600" height="350" style="border:0; width:100%" allowfullscreen="" loading="lazy"></iframe>
+        </div><br />
 
         <h5>Payment Method :</h5>
         <div class="form-Check ml-4">
@@ -265,6 +267,7 @@ export default {
       country: "NG",
       paymentMethod: "",
       showPickup: "",
+      showMap: "",
       payment: false,
       selectedBrand: {},
       selectedRepair: {},
@@ -420,6 +423,7 @@ export default {
 
     toggleTrue() {
       this.showPickup = true;
+      this.showMap = false
     },
 
     togglePtrue() {
@@ -432,6 +436,7 @@ export default {
 
     toggleFalse() {
       this.showPickup = false;
+      this.showMap = true
     },
   },
 };
